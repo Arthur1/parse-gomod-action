@@ -1,15 +1,20 @@
 {
-  "name": "gomod-parser-action",
+  "name": "gomod-parse-action",
   "version": "0.0.0",
   "description": "go.mod parser for GitHub Actions",
   "exports": {
     ".": "./dist/index.js"
   },
   "scripts": {
-    "build": "ncc build src/index.ts --license licenses.txt"
+    "build": "ncc build src/index.ts --license licenses.txt",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.16.5",
     "@vercel/ncc": "^0.38.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
     "typescript": "^5.5.4"
   },
   "dependencies": {

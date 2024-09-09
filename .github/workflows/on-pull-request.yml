@@ -1,0 +1,8 @@
+name: CI for pull request
+
+on:
+  pull_request:
+
+jobs:
+  test-node:
+    uses: ./.github/workflows/wf-test-node.yml

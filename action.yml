@@ -1,17 +1,17 @@
 name: go.mod parser
-description: parse go.mod file of Go
+description: parse go.mod or go.work file of Go
 author: ASAKURA Kazuki @Arthur1
 inputs:
   file:
-    description: Path to the go.mod
+    description: Path to the go.mod/go.work
     required: true
     default: ./go.mod
 outputs:
-  go-directive:
+  go:
     description: go directive value of go.mod
-  toolchain-directive:
+  toolchain:
     description: toolchain directive value of go.mod
-  toolchain-directive-go-version:
+  toolchain-go-version:
     description: Go version declared in toolchain directive of go.mod
 runs:
   using: node20

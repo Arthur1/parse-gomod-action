@@ -1,0 +1,15 @@
+name: CI for release
+
+on:
+  push:
+    tags: ["v[0-9]+.[0-9]+.[0-9]+"]
+
+jobs:
+  update-major-version-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update major version tag
+        uses: haya14busa/action-update-semver@v1
+        with:
+          major_version_tag_only: true
