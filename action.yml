@@ -1,4 +1,4 @@
-name: go.mod parser
+name: Parse go.mod
 description: parse go.mod or go.work file of Go
 author: ASAKURA Kazuki @Arthur1
 inputs:
