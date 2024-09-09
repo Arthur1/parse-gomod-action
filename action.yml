@@ -1,0 +1,18 @@
+name: go.mod parser
+description: parse go.mod file of Go
+author: ASAKURA Kazuki @Arthur1
+inputs:
+  file:
+    description: Path to the go.mod
+    required: true
+    default: ./go.mod
+outputs:
+  go-directive:
+    description: go directive value of go.mod
+  toolchain-directive:
+    description: toolchain directive value of go.mod
+  toolchain-directive-go-version:
+    description: Go version declared in toolchain directive of go.mod
+runs:
+  using: node20
+  main: dist/index.js
