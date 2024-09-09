@@ -1,4 +1,4 @@
-module github.com/Arthur1/gomod-parse-action/test
+module github.com/Arthur1/parse-gomod-action/test
 
 go 1.22.0
 
