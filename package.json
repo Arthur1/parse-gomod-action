@@ -1,6 +1,6 @@
 {
   "name": "gomod-parse-action",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "go.mod parser for GitHub Actions",
   "exports": {
     ".": "./dist/index.js"
