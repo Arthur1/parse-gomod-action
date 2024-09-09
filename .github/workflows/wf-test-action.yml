@@ -19,6 +19,7 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: ${{ steps.parse-gomod.outputs.toolchain-go-version }}
+          cache: false
       - name: Print installed go version
         run: |
           go version
