@@ -9,10 +9,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Test local action
-        id: test-action
+        id: parse-gomod
         uses: ./
         with:
           file: ./test/go.mod
       - name: Print output
         run: |
-          echo "go=${{ steps.test-action.outputs.go }} toolchain=${{ steps.test-action.outputs.toolchain }} toolchain-go-version=${{ steps.test-action.outputs.toolchain-go-version }}"
+          echo "go=${{ steps.parse-gomod.outputs.go }} toolchain=${{ steps.parse-gomod.outputs.toolchain }} toolchain-go-version=${{ steps.parse-gomod.outputs.toolchain-go-version }}"
+      - uses: actions/setup-go@v5
+        with:
+          go-version: ${{ steps.parse-gomod.outputs.toolchain-go-version }}
+      - name: Print installed go version
+        run: |
+          go version
