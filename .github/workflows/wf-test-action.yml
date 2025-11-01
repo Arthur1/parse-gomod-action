@@ -16,7 +16,7 @@ jobs:
       - name: Print output
         run: |
           echo "go=${{ steps.parse-gomod.outputs.go }} toolchain=${{ steps.parse-gomod.outputs.toolchain }} toolchain-go-version=${{ steps.parse-gomod.outputs.toolchain-go-version }}"
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v6
         with:
           go-version: ${{ steps.parse-gomod.outputs.toolchain-go-version }}
           cache: false
